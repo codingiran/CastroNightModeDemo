@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  QueueListViewController.h
 //  CastroNightModeDemo
 //
 //  Created by 邱一郎 on 2018/11/29.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface QueueListViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
