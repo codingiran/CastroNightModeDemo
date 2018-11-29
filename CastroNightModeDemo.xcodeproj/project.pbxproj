@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC15698721AFC6A600C11F12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC15698621AFC6A600C11F12 /* AppDelegate.m */; };
+		AC15698A21AFC6A600C11F12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC15698921AFC6A600C11F12 /* ViewController.m */; };
+		AC15698D21AFC6A600C11F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC15698B21AFC6A600C11F12 /* Main.storyboard */; };
+		AC15698F21AFC6A800C11F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC15698E21AFC6A800C11F12 /* Assets.xcassets */; };
+		AC15699221AFC6A800C11F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC15699021AFC6A800C11F12 /* LaunchScreen.storyboard */; };
+		AC15699521AFC6A800C11F12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC15699421AFC6A800C11F12 /* main.m */; };
+		AC15699F21AFC6A800C11F12 /* CastroNightModeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC15699E21AFC6A800C11F12 /* CastroNightModeDemoTests.m */; };
+		AC1569AA21AFC6A800C11F12 /* CastroNightModeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1569A921AFC6A800C11F12 /* CastroNightModeDemoUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC15699B21AFC6A800C11F12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC15697A21AFC6A600C11F12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC15698121AFC6A600C11F12;
+			remoteInfo = CastroNightModeDemo;
+		};
+		AC1569A621AFC6A800C11F12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC15697A21AFC6A600C11F12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC15698121AFC6A600C11F12;
+			remoteInfo = CastroNightModeDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC15698221AFC6A600C11F12 /* CastroNightModeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastroNightModeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC15698521AFC6A600C11F12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC15698621AFC6A600C11F12 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC15698821AFC6A600C11F12 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AC15698921AFC6A600C11F12 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AC15698C21AFC6A600C11F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC15698E21AFC6A800C11F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC15699121AFC6A800C11F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC15699321AFC6A800C11F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC15699421AFC6A800C11F12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC15699A21AFC6A800C11F12 /* CastroNightModeDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CastroNightModeDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC15699E21AFC6A800C11F12 /* CastroNightModeDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CastroNightModeDemoTests.m; sourceTree = "<group>"; };
+		AC1569A021AFC6A800C11F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC1569A521AFC6A800C11F12 /* CastroNightModeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CastroNightModeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1569A921AFC6A800C11F12 /* CastroNightModeDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CastroNightModeDemoUITests.m; sourceTree = "<group>"; };
+		AC1569AB21AFC6A800C11F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC15697F21AFC6A600C11F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC15699721AFC6A800C11F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC1569A221AFC6A800C11F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC15697921AFC6A600C11F12 = {
+			isa = PBXGroup;
+			children = (
+				AC15698421AFC6A600C11F12 /* CastroNightModeDemo */,
+				AC15699D21AFC6A800C11F12 /* CastroNightModeDemoTests */,
+				AC1569A821AFC6A800C11F12 /* CastroNightModeDemoUITests */,
+				AC15698321AFC6A600C11F12 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC15698321AFC6A600C11F12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC15698221AFC6A600C11F12 /* CastroNightModeDemo.app */,
+				AC15699A21AFC6A800C11F12 /* CastroNightModeDemoTests.xctest */,
+				AC1569A521AFC6A800C11F12 /* CastroNightModeDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC15698421AFC6A600C11F12 /* CastroNightModeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				AC15698521AFC6A600C11F12 /* AppDelegate.h */,
+				AC15698621AFC6A600C11F12 /* AppDelegate.m */,
+				AC15698821AFC6A600C11F12 /* ViewController.h */,
+				AC15698921AFC6A600C11F12 /* ViewController.m */,
+				AC15698B21AFC6A600C11F12 /* Main.storyboard */,
+				AC15698E21AFC6A800C11F12 /* Assets.xcassets */,
+				AC15699021AFC6A800C11F12 /* LaunchScreen.storyboard */,
+				AC15699321AFC6A800C11F12 /* Info.plist */,
+				AC15699421AFC6A800C11F12 /* main.m */,
+			);
+			path = CastroNightModeDemo;
+			sourceTree = "<group>";
+		};
+		AC15699D21AFC6A800C11F12 /* CastroNightModeDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC15699E21AFC6A800C11F12 /* CastroNightModeDemoTests.m */,
+				AC1569A021AFC6A800C11F12 /* Info.plist */,
+			);
+			path = CastroNightModeDemoTests;
+			sourceTree = "<group>";
+		};
+		AC1569A821AFC6A800C11F12 /* CastroNightModeDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC1569A921AFC6A800C11F12 /* CastroNightModeDemoUITests.m */,
+				AC1569AB21AFC6A800C11F12 /* Info.plist */,
+			);
+			path = CastroNightModeDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC15698121AFC6A600C11F12 /* CastroNightModeDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC1569AE21AFC6A800C11F12 /* Build configuration list for PBXNativeTarget "CastroNightModeDemo" */;
+			buildPhases = (
+				AC15697E21AFC6A600C11F12 /* Sources */,
+				AC15697F21AFC6A600C11F12 /* Frameworks */,
+				AC15698021AFC6A600C11F12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CastroNightModeDemo;
+			productName = CastroNightModeDemo;
+			productReference = AC15698221AFC6A600C11F12 /* CastroNightModeDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC15699921AFC6A800C11F12 /* CastroNightModeDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC1569B121AFC6A800C11F12 /* Build configuration list for PBXNativeTarget "CastroNightModeDemoTests" */;
+			buildPhases = (
+				AC15699621AFC6A800C11F12 /* Sources */,
+				AC15699721AFC6A800C11F12 /* Frameworks */,
+				AC15699821AFC6A800C11F12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC15699C21AFC6A800C11F12 /* PBXTargetDependency */,
+			);
+			name = CastroNightModeDemoTests;
+			productName = CastroNightModeDemoTests;
+			productReference = AC15699A21AFC6A800C11F12 /* CastroNightModeDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC1569A421AFC6A800C11F12 /* CastroNightModeDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC1569B421AFC6A800C11F12 /* Build configuration list for PBXNativeTarget "CastroNightModeDemoUITests" */;
+			buildPhases = (
+				AC1569A121AFC6A800C11F12 /* Sources */,
+				AC1569A221AFC6A800C11F12 /* Frameworks */,
+				AC1569A321AFC6A800C11F12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC1569A721AFC6A800C11F12 /* PBXTargetDependency */,
+			);
+			name = CastroNightModeDemoUITests;
+			productName = CastroNightModeDemoUITests;
+			productReference = AC1569A521AFC6A800C11F12 /* CastroNightModeDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC15697A21AFC6A600C11F12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = CodingIran;
+				TargetAttributes = {
+					AC15698121AFC6A600C11F12 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					AC15699921AFC6A800C11F12 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = AC15698121AFC6A600C11F12;
+					};
+					AC1569A421AFC6A800C11F12 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = AC15698121AFC6A600C11F12;
+					};
+				};
+			};
+			buildConfigurationList = AC15697D21AFC6A600C11F12 /* Build configuration list for PBXProject "CastroNightModeDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC15697921AFC6A600C11F12;
+			productRefGroup = AC15698321AFC6A600C11F12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC15698121AFC6A600C11F12 /* CastroNightModeDemo */,
+				AC15699921AFC6A800C11F12 /* CastroNightModeDemoTests */,
+				AC1569A421AFC6A800C11F12 /* CastroNightModeDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC15698021AFC6A600C11F12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC15699221AFC6A800C11F12 /* LaunchScreen.storyboard in Resources */,
+				AC15698F21AFC6A800C11F12 /* Assets.xcassets in Resources */,
+				AC15698D21AFC6A600C11F12 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC15699821AFC6A800C11F12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC1569A321AFC6A800C11F12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC15697E21AFC6A600C11F12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC15698A21AFC6A600C11F12 /* ViewController.m in Sources */,
+				AC15699521AFC6A800C11F12 /* main.m in Sources */,
+				AC15698721AFC6A600C11F12 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC15699621AFC6A800C11F12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC15699F21AFC6A800C11F12 /* CastroNightModeDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC1569A121AFC6A800C11F12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC1569AA21AFC6A800C11F12 /* CastroNightModeDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC15699C21AFC6A800C11F12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC15698121AFC6A600C11F12 /* CastroNightModeDemo */;
+			targetProxy = AC15699B21AFC6A800C11F12 /* PBXContainerItemProxy */;
+		};
+		AC1569A721AFC6A800C11F12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC15698121AFC6A600C11F12 /* CastroNightModeDemo */;
+			targetProxy = AC1569A621AFC6A800C11F12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC15698B21AFC6A600C11F12 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC15698C21AFC6A600C11F12 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC15699021AFC6A800C11F12 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC15699121AFC6A800C11F12 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC1569AC21AFC6A800C11F12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AC1569AD21AFC6A800C11F12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC1569AF21AFC6A800C11F12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6P8D4EMSLJ;
+				INFOPLIST_FILE = CastroNightModeDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingIran.CastroNightModeDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC1569B021AFC6A800C11F12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6P8D4EMSLJ;
+				INFOPLIST_FILE = CastroNightModeDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingIran.CastroNightModeDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AC1569B221AFC6A800C11F12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6P8D4EMSLJ;
+				INFOPLIST_FILE = CastroNightModeDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingIran.CastroNightModeDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CastroNightModeDemo.app/CastroNightModeDemo";
+			};
+			name = Debug;
+		};
+		AC1569B321AFC6A800C11F12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6P8D4EMSLJ;
+				INFOPLIST_FILE = CastroNightModeDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingIran.CastroNightModeDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CastroNightModeDemo.app/CastroNightModeDemo";
+			};
+			name = Release;
+		};
+		AC1569B521AFC6A800C11F12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6P8D4EMSLJ;
+				INFOPLIST_FILE = CastroNightModeDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingIran.CastroNightModeDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CastroNightModeDemo;
+			};
+			name = Debug;
+		};
+		AC1569B621AFC6A800C11F12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6P8D4EMSLJ;
+				INFOPLIST_FILE = CastroNightModeDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingIran.CastroNightModeDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CastroNightModeDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC15697D21AFC6A600C11F12 /* Build configuration list for PBXProject "CastroNightModeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC1569AC21AFC6A800C11F12 /* Debug */,
+				AC1569AD21AFC6A800C11F12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC1569AE21AFC6A800C11F12 /* Build configuration list for PBXNativeTarget "CastroNightModeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC1569AF21AFC6A800C11F12 /* Debug */,
+				AC1569B021AFC6A800C11F12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC1569B121AFC6A800C11F12 /* Build configuration list for PBXNativeTarget "CastroNightModeDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC1569B221AFC6A800C11F12 /* Debug */,
+				AC1569B321AFC6A800C11F12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC1569B421AFC6A800C11F12 /* Build configuration list for PBXNativeTarget "CastroNightModeDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC1569B521AFC6A800C11F12 /* Debug */,
+				AC1569B621AFC6A800C11F12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC15697A21AFC6A600C11F12 /* Project object */;
+}
