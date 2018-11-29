@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface QueueListCell : UITableViewCell
 
+@property(nonatomic, strong) Queue *queue;
+
++ (instancetype)queueListCellWithTableView:(UITableView *)tableView;
 
 @end
 

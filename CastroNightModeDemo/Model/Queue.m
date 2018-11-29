@@ -17,9 +17,7 @@
 
 @implementation Queue
 
-- (instancetype)initWithArtworkImageName:(NSString *)artworkImageName
-                            artworkTitle:(NSString *)artworkTitle
-                        andArtworkLength:(NSString *)artworkLength
+- (instancetype)initWithArtworkImageName:(NSString *)artworkImageName artworkTitle:(NSString *)artworkTitle andArtworkLength:(NSString *)artworkLength
 {
     if (self = [super init]) {
         self.artworkImageName = artworkImageName;

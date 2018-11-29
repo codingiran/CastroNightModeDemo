@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0512B021AFD8C800C61BE7 /* QueueListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0512AD21AFD8C800C61BE7 /* QueueListCell.m */; };
+		AC0512B121AFD8C800C61BE7 /* QueueListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC0512AE21AFD8C800C61BE7 /* QueueListCell.xib */; };
 		AC15698721AFC6A600C11F12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC15698621AFC6A600C11F12 /* AppDelegate.m */; };
 		AC15698D21AFC6A600C11F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC15698B21AFC6A600C11F12 /* Main.storyboard */; };
 		AC15698F21AFC6A800C11F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC15698E21AFC6A800C11F12 /* Assets.xcassets */; };
@@ -14,8 +16,6 @@
 		AC15699521AFC6A800C11F12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC15699421AFC6A800C11F12 /* main.m */; };
 		AC15699F21AFC6A800C11F12 /* CastroNightModeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC15699E21AFC6A800C11F12 /* CastroNightModeDemoTests.m */; };
 		AC1569AA21AFC6A800C11F12 /* CastroNightModeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1569A921AFC6A800C11F12 /* CastroNightModeDemoUITests.m */; };
-		AC1569BA21AFD14200C11F12 /* QueueListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1569B821AFD14200C11F12 /* QueueListCell.m */; };
-		AC1569BB21AFD14200C11F12 /* QueueListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1569B921AFD14200C11F12 /* QueueListCell.xib */; };
 		AC1569C121AFD1AC00C11F12 /* QueueListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1569C021AFD1AC00C11F12 /* QueueListViewController.m */; };
 		AC1569C421AFD51000C11F12 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1569C321AFD51000C11F12 /* Queue.m */; };
 /* End PBXBuildFile section */
@@ -38,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC0512AD21AFD8C800C61BE7 /* QueueListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueListCell.m; sourceTree = "<group>"; };
+		AC0512AE21AFD8C800C61BE7 /* QueueListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueueListCell.xib; sourceTree = "<group>"; };
+		AC0512AF21AFD8C800C61BE7 /* QueueListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueListCell.h; sourceTree = "<group>"; };
 		AC15698221AFC6A600C11F12 /* CastroNightModeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastroNightModeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC15698521AFC6A600C11F12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AC15698621AFC6A600C11F12 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,9 +55,6 @@
 		AC1569A521AFC6A800C11F12 /* CastroNightModeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CastroNightModeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1569A921AFC6A800C11F12 /* CastroNightModeDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CastroNightModeDemoUITests.m; sourceTree = "<group>"; };
 		AC1569AB21AFC6A800C11F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC1569B721AFD14200C11F12 /* QueueListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueListCell.h; sourceTree = "<group>"; };
-		AC1569B821AFD14200C11F12 /* QueueListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QueueListCell.m; sourceTree = "<group>"; };
-		AC1569B921AFD14200C11F12 /* QueueListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QueueListCell.xib; sourceTree = "<group>"; };
 		AC1569BF21AFD1AC00C11F12 /* QueueListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueListViewController.h; sourceTree = "<group>"; };
 		AC1569C021AFD1AC00C11F12 /* QueueListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QueueListViewController.m; sourceTree = "<group>"; };
 		AC1569C221AFD51000C11F12 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
@@ -153,9 +153,9 @@
 		AC1569BD21AFD15C00C11F12 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AC1569B721AFD14200C11F12 /* QueueListCell.h */,
-				AC1569B821AFD14200C11F12 /* QueueListCell.m */,
-				AC1569B921AFD14200C11F12 /* QueueListCell.xib */,
+				AC0512AF21AFD8C800C61BE7 /* QueueListCell.h */,
+				AC0512AD21AFD8C800C61BE7 /* QueueListCell.m */,
+				AC0512AE21AFD8C800C61BE7 /* QueueListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 				AC15699221AFC6A800C11F12 /* LaunchScreen.storyboard in Resources */,
 				AC15698F21AFC6A800C11F12 /* Assets.xcassets in Resources */,
 				AC15698D21AFC6A600C11F12 /* Main.storyboard in Resources */,
-				AC1569BB21AFD14200C11F12 /* QueueListCell.xib in Resources */,
+				AC0512B121AFD8C800C61BE7 /* QueueListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +304,7 @@
 				AC1569C121AFD1AC00C11F12 /* QueueListViewController.m in Sources */,
 				AC15699521AFC6A800C11F12 /* main.m in Sources */,
 				AC15698721AFC6A600C11F12 /* AppDelegate.m in Sources */,
-				AC1569BA21AFD14200C11F12 /* QueueListCell.m in Sources */,
+				AC0512B021AFD8C800C61BE7 /* QueueListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
