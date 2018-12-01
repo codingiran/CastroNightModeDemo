@@ -11,6 +11,19 @@
 
 NSString * const kModeSetting = @"modeSetting";
 
+@interface ModeShiftManager ()
+
+@property(nonatomic, strong, readwrite) UIColor *viewBkgColor;
+@property(nonatomic, strong, readwrite) UIColor *navigationColor;
+@property(nonatomic, strong, readwrite) UIColor *navigationTintColor;
+@property(nonatomic, strong, readwrite) UIColor *cellBkgColor;
+@property(nonatomic, strong, readwrite) UIColor *cellTextColor;
+@property(nonatomic, strong, readwrite) UIColor *cellDetailTextColor;
+@property(nonatomic, strong, readwrite) UIColor *cellBorderColor;
+@property(nonatomic, strong, readwrite) UIColor *cellImageMaskColor;
+
+@end
+
 @implementation ModeShiftManager
 
 static ModeShiftManager *modeShiftManager = nil;
@@ -51,6 +64,8 @@ static ModeShiftManager *modeShiftManager = nil;
             self.cellBkgColor = UIColorMake(252, 252, 252);
             self.cellTextColor = UIColorMake(10, 10, 10);
             self.cellDetailTextColor = UIColorMake(150, 150, 150);
+            self.cellBorderColor = self.cellBkgColor;
+            self.cellImageMaskColor = [UIColor clearColor];
         }
             break;
         case ThemeModeNight:
@@ -61,6 +76,8 @@ static ModeShiftManager *modeShiftManager = nil;
             self.cellBkgColor = UIColorMake(29, 29, 29);
             self.cellTextColor = UIColorMake(242, 242, 242);
             self.cellDetailTextColor = UIColorMake(100, 100, 100);
+            self.cellBorderColor = UIColorMake(49, 49, 49);
+            self.cellImageMaskColor = [[UIColor blackColor] colorWithAlphaComponent:0.15];
         }
             break;
             

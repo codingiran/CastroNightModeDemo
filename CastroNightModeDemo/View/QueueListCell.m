@@ -15,9 +15,12 @@ static CGFloat const kCellMargin = 6;
 
 @interface QueueListCell ()
 
+@property (weak, nonatomic) IBOutlet UIView *imageMask;
 @property (weak, nonatomic) IBOutlet UIImageView *artworkImage;
 @property (weak, nonatomic) IBOutlet UILabel *artworkTitle;
 @property (weak, nonatomic) IBOutlet UILabel *artworkLength;
+@property (weak, nonatomic) IBOutlet UIView *upperLine;
+@property (weak, nonatomic) IBOutlet UIView *underLine;
 
 @end
 
@@ -37,6 +40,9 @@ static CGFloat const kCellMargin = 6;
     self.backgroundColor = ModeShifter.cellBkgColor;
     self.artworkTitle.textColor = ModeShifter.cellTextColor;
     self.artworkLength.textColor = ModeShifter.cellDetailTextColor;
+    self.upperLine.backgroundColor = ModeShifter.cellBorderColor;
+    self.underLine.backgroundColor = ModeShifter.cellBorderColor;
+    self.imageMask.backgroundColor = ModeShifter.cellImageMaskColor;
 }
 
 - (void)awakeFromNib
@@ -48,6 +54,9 @@ static CGFloat const kCellMargin = 6;
     self.artworkImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.artworkImage.layer.borderWidth = 0.5;
     self.artworkImage.layer.masksToBounds = YES;
+    
+    self.imageMask.layer.cornerRadius = self.artworkImage.layer.cornerRadius;
+    self.imageMask.layer.masksToBounds = YES;
 }
 
 - (void)setFrame:(CGRect)frame

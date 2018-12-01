@@ -26,6 +26,10 @@
                             <constraint firstAttribute="height" constant="50" id="mno-Rh-o6W"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYp-Ii-7Ob">
+                        <rect key="frame" x="20" y="15" width="50" height="50"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unC-4l-XvO">
                         <rect key="frame" x="85" y="15" width="261" height="22.5"/>
                         <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="19"/>
@@ -46,16 +50,40 @@
                         </constraints>
                         <state key="normal" image="arrow"/>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZW-ws-UlT">
+                        <rect key="frame" x="0.0" y="0.0" width="401" height="0.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="oM3-6I-2f2"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n35-nE-iXZ">
+                        <rect key="frame" x="0.0" y="99" width="401" height="0.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="nfT-co-hhJ"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="FG7-Ge-gzC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="6DM-9o-U4F"/>
+                    <constraint firstItem="GYp-Ii-7Ob" firstAttribute="top" secondItem="FG7-Ge-gzC" secondAttribute="top" id="8hM-KX-0GZ"/>
                     <constraint firstItem="MeU-vv-Xfw" firstAttribute="leading" secondItem="unC-4l-XvO" secondAttribute="trailing" constant="15" id="MrN-Ew-e6U"/>
+                    <constraint firstItem="EZW-ws-UlT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NBK-2O-kZo"/>
                     <constraint firstAttribute="bottom" secondItem="ZEe-Vo-hs8" secondAttribute="bottom" constant="10" id="Opd-ly-0Xo"/>
+                    <constraint firstAttribute="trailing" secondItem="n35-nE-iXZ" secondAttribute="trailing" id="Qcm-kE-7qp"/>
+                    <constraint firstAttribute="trailing" secondItem="EZW-ws-UlT" secondAttribute="trailing" id="QnN-4i-oBg"/>
                     <constraint firstItem="FG7-Ge-gzC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Uej-w4-ZtT"/>
                     <constraint firstItem="MeU-vv-Xfw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WWl-5g-3I8"/>
+                    <constraint firstItem="GYp-Ii-7Ob" firstAttribute="leading" secondItem="FG7-Ge-gzC" secondAttribute="leading" id="bCm-4I-ImO"/>
+                    <constraint firstItem="GYp-Ii-7Ob" firstAttribute="trailing" secondItem="FG7-Ge-gzC" secondAttribute="trailing" id="bWj-qe-Y47"/>
                     <constraint firstItem="ZEe-Vo-hs8" firstAttribute="leading" secondItem="unC-4l-XvO" secondAttribute="leading" id="fOw-l4-k6v"/>
+                    <constraint firstItem="GYp-Ii-7Ob" firstAttribute="bottom" secondItem="FG7-Ge-gzC" secondAttribute="bottom" id="gUP-Mw-l8C"/>
                     <constraint firstItem="unC-4l-XvO" firstAttribute="top" secondItem="FG7-Ge-gzC" secondAttribute="top" id="h6A-x0-pJ9"/>
+                    <constraint firstItem="n35-nE-iXZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="he8-63-amP"/>
                     <constraint firstAttribute="trailing" secondItem="MeU-vv-Xfw" secondAttribute="trailing" constant="15" id="jpE-9k-09W"/>
+                    <constraint firstItem="EZW-ws-UlT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qiE-Nn-6Ml"/>
+                    <constraint firstAttribute="bottom" secondItem="n35-nE-iXZ" secondAttribute="bottom" id="xEg-2J-As7"/>
                     <constraint firstItem="unC-4l-XvO" firstAttribute="leading" secondItem="FG7-Ge-gzC" secondAttribute="trailing" constant="15" id="yPn-QW-kye"/>
                 </constraints>
             </tableViewCellContentView>
@@ -64,8 +92,11 @@
                 <outlet property="artworkImage" destination="FG7-Ge-gzC" id="O35-hf-G12"/>
                 <outlet property="artworkLength" destination="ZEe-Vo-hs8" id="fL2-TN-LLX"/>
                 <outlet property="artworkTitle" destination="unC-4l-XvO" id="fv8-QU-8o2"/>
+                <outlet property="imageMask" destination="GYp-Ii-7Ob" id="ftX-wh-hFL"/>
+                <outlet property="underLine" destination="n35-nE-iXZ" id="q59-ud-mXA"/>
+                <outlet property="upperLine" destination="EZW-ws-UlT" id="7CL-iu-KBU"/>
             </connections>
-            <point key="canvasLocation" x="100" y="52"/>
+            <point key="canvasLocation" x="37.600000000000001" y="-3.5982008995502253"/>
         </tableViewCell>
     </objects>
     <resources>
