@@ -8,6 +8,7 @@
 
 #import "QueueListCell.h"
 #import "Queue.h"
+#import "ModeShiftManager.h"
 
 static NSString * const kCellResuseIdentifier = @"QueueListCell";
 static CGFloat const kCellMargin = 6;
@@ -31,10 +32,18 @@ static CGFloat const kCellMargin = 6;
     return cell;
 }
 
+- (void)refreshUI
+{
+    self.backgroundColor = ModeShifter.cellBkgColor;
+    self.artworkTitle.textColor = ModeShifter.cellTextColor;
+    self.artworkLength.textColor = ModeShifter.cellDetailTextColor;
+}
+
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.backgroundColor = [UIColor whiteColor];
+    [self refreshUI];
+    
     self.artworkImage.layer.cornerRadius = 6;
     self.artworkImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.artworkImage.layer.borderWidth = 0.5;

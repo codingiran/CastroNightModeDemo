@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ModeShiftManager.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // read setting from sandbox
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:kModeSetting]) {
+        ModeShifter.themeMode = [[[NSUserDefaults standardUserDefaults] valueForKey:kModeSetting] integerValue];
+    } else {
+        ModeShifter.themeMode = ThemeModeDay;
+    }
+    
+    
     return YES;
 }
 

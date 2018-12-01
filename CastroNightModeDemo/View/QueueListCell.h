@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)queueListCellWithTableView:(UITableView *)tableView;
 
+- (void)refreshUI;
+
 @end
 
 NS_ASSUME_NONNULL_END
