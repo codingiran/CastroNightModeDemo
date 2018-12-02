@@ -48,6 +48,9 @@ static CGFloat const kCellMargin = 6;
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     [self refreshUI];
     
     self.artworkImage.layer.cornerRadius = 6;

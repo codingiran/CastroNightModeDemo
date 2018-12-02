@@ -16,11 +16,8 @@
 @interface QueueListViewController ()<UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 
 @property(weak, nonatomic) IBOutlet UITableView *queueTableView;
-
 @property(nonatomic, strong) NSArray<Queue *> *queueList;
-
 @property(nonatomic, strong) UIView *previousModeViewSnapshot;
-
 @property(nonatomic, strong) CAShapeLayer *snapshotMaskLayer;
 
 @end
@@ -30,7 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
+    
+    self.queueTableView.backgroundColor = [UIColor clearColor];
+    
     UIBarButtonItem *setting = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"setting"] style:UIBarButtonItemStylePlain target:self action:@selector(setting:)];
     self.navigationItem.leftBarButtonItem = setting;
     
@@ -58,9 +57,9 @@
 }
 
 #pragma mark - touch event
-
 - (void)setting:(UIBarButtonItem *)sender
 {
+    // shift mode
     if (ModeShifter.themeMode == ThemeModeDay) {
         ModeShifter.themeMode = ThemeModeNight;
     } else {
@@ -70,13 +69,12 @@
     // refresh UI
     [self refreshUI];
     
-    // refresh StatusBar
+    // refresh status bar
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)refreshUI
 {
-    self.queueTableView.backgroundColor = [UIColor clearColor];
     self.view.backgroundColor = ModeShifter.viewBkgColor;
     [self.navigationController.navigationBar setBackgroundImage:[self createImageWithColor:ModeShifter.navigationColor] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setTintColor:ModeShifter.navigationTintColor];
@@ -95,6 +93,7 @@
 
 - (void)refresh:(UIRefreshControl *)sender
 {
+    // simulate
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [sender endRefreshing];
     });
@@ -110,7 +109,7 @@
             [self adjustMaskLayerBasedOnPanGesture:panGesture];
             break;
         case UIGestureRecognizerStateEnded:
-//        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateCancelled:
         case UIGestureRecognizerStateFailed:
             [self endInteractiveTransitionWithPanGesture:panGesture];
             break;
@@ -134,6 +133,7 @@
     
     // create new mask
     self.snapshotMaskLayer = [CAShapeLayer layer];
+//    self.snapshotMaskLayer.frame = window.bounds;
     self.snapshotMaskLayer.path = [UIBezierPath bezierPathWithRect:window.bounds].CGPath;
     self.snapshotMaskLayer.fillColor = [UIColor blackColor].CGColor;
     self.previousModeViewSnapshot.layer.mask = self.snapshotMaskLayer;
@@ -157,14 +157,17 @@
     if (!window) return;
     
     [CATransaction begin];
-    [CATransaction setDisableActions:NO];
+    [CATransaction setDisableActions:YES];
     
     CGFloat verticalTranslation = [panGesture translationInView:window].y;
-    if (verticalTranslation < 0) {
+    if (verticalTranslation < 0.0) {
         [panGesture setTranslation:CGPointZero inView:window];
-        self.snapshotMaskLayer.frame = CGRectMake(self.snapshotMaskLayer.frame.origin.x, 0, self.snapshotMaskLayer.frame.size.width, self.snapshotMaskLayer.frame.size.height);
+        CGRect frame = self.snapshotMaskLayer.frame;
+        frame.origin.y = 0;
     } else {
-        self.snapshotMaskLayer.frame = CGRectMake(self.snapshotMaskLayer.frame.origin.x, verticalTranslation, self.snapshotMaskLayer.frame.size.width, self.snapshotMaskLayer.frame.size.height);
+        CGRect frame = self.snapshotMaskLayer.frame;
+        frame.origin.y = verticalTranslation;
+        self.snapshotMaskLayer.frame = frame;
     }
     [CATransaction commit];
 }
@@ -179,8 +182,8 @@
     
     CGFloat damping = 45.0f;
     
-    
     CGFloat verticalOffset = [panGesture velocityInView:window].y / damping;
+    
     [maskingPath addQuadCurveToPoint:CGPointMake(CGRectGetMaxX(window.bounds), 0) controlPoint:CGPointMake(CGRectGetMidX(window.bounds), verticalOffset)];
     
     [maskingPath addLineToPoint:CGPointMake(CGRectGetMaxX(window.bounds), CGRectGetMaxY(window.bounds))];
@@ -190,7 +193,6 @@
     [maskingPath closePath];
     
     self.snapshotMaskLayer.path = maskingPath.CGPath;
-    
 }
 
 - (void)endInteractiveTransitionWithPanGesture:(UIPanGestureRecognizer *)panGesture
@@ -205,7 +207,7 @@
     BOOL hasPassedThreshold = transition.y > CGRectGetMidY(window.bounds);
     
     BOOL shouldCompleteTransition = isMovingDownwards || hasPassedThreshold;
-    
+
     if (shouldCompleteTransition) {
         [self completeInteractiveTransitionWithVelocity:velocity];
     } else {
@@ -221,16 +223,17 @@
         [self setting:nil];
         [self cleanupAfterInteractiveTransition];
     }];
-    
 }
 
 - (void)completeInteractiveTransitionWithVelocity:(CGPoint)velocity
 {
     UIWindow *window = self.queueTableView.window;
-    if (!window || !self.snapshotMaskLayer) return;
+//    CAShapeLayer *snapshotMaskLayer = self.snapshotMaskLayer;
+//    if (!window || !snapshotMaskLayer) return;
     
-    CGPoint targetPoint = CGPointMake(0, CGRectGetMaxY(window.bounds));
+    CGPoint targetPoint = CGPointMake(0.0, CGRectGetMaxY(window.bounds));
     [self animateOfLayer:self.snapshotMaskLayer toTargetPoint:targetPoint withVelocity:velocity completion:^{
+        NSLog(@"----结束------");
         [self cleanupAfterInteractiveTransition];
     }];
 }
@@ -245,17 +248,22 @@
 {
     CGPoint startPoint = layer.position;
     layer.position = targetPoint;
-    
+
     CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"postion"];
-    positionAnimation.duration = MIN(3.0, [self timeRequiredToMoveFromPoint:startPoint toPoint:targetPoint withVelocity:velocity]);
+    positionAnimation.duration = MIN(1.0, [self timeRequiredToMoveFromPoint:startPoint toPoint:targetPoint withVelocity:velocity]);
     positionAnimation.fromValue = [NSValue valueWithCGPoint:startPoint];
     positionAnimation.toValue = [NSValue valueWithCGPoint:targetPoint];
-    
+    positionAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    positionAnimation.removedOnCompletion = NO;
+    positionAnimation.fillMode = kCAFillModeForwards;
+    NSLog(@"----开始------");
+
     [CATransaction begin];
+
     [CATransaction setCompletionBlock:completion];
-    
-    [layer addAnimation:positionAnimation forKey:@"position"];
-    
+
+    [self.snapshotMaskLayer addAnimation:positionAnimation forKey:@"layermask"];
+
     [CATransaction commit];
 }
 
@@ -267,13 +275,12 @@
     return requiredTime;
 }
 
-
 #pragma mark - UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
     UIPanGestureRecognizer *panGesture = (UIPanGestureRecognizer *)gestureRecognizer;
     CGPoint transition = [panGesture translationInView:self.queueTableView.window];
-    return transition.y > 0;
+    return transition.y > 0.0;
 }
 
 #pragma mark - table view data source
