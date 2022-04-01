@@ -1,4 +1,4 @@
 # CastroNightModeDemo
 深色模式切换动画(Salute to Castro)
 
-![castro - 02_](https://user-images.githubusercontent.com/11780294/161241652-31ce99ee-a8c9-439b-92e7-1560f331ea9f.gif)
+![castro - 02 - 01_](https://user-images.githubusercontent.com/11780294/161242012-f4d1d188-7b57-4c1c-8a89-c3ae9a454421.gif)
